@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    padding: 0 1em;
+    width: 100%;
+    background: rgb(252, 162, 220)
+}
+
+/******
+	Header
+		 ******/
+
+.logo {
+    margin-top: 1em;
+    width: 100px;
+    animation: animation 3s linear infinite;
+}
+
+@keyframes animation {
+    0%   {transform: translateX(0);}
+    50%  {transform: translateX(10px)}
+    100% {transform: translateX(0px);}
+} 
+
+nav ul {
+    padding-left: 1em;
+
+    margin-top: 2em;
+    list-style: none;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li a {
+    margin-right: .7em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: .6em;
+    border: 2px solid black;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    border: 2px solid rgb(252, 173, 221);
+    background-color: whitesmoke;
+    color:black;
+}
+
+/******
+	Hero
+		 ******/
+
+.hero{
+    text-align: center;
+    margin-top: 4em;
+}
+
+.hero .title {
+    font-size: 3.1em;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.hero .sub_title {
+    margin-top: 2em;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-style: italic;
+    margin-bottom: 2.5em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: #0f0f0f;
+    margin-bottom: 2em;
+}
+
+/******
+	Shoe
+		 ******/
+
+.shoe_container {
+    display: grid;
+    gap: 1em;
+}
+
+.shoe {
+    text-align: left;
+    padding: 1em;
+    box-shadow: -2px 11px 39px -10px rgba(0,0,0,0.75)
+}
+
+.shoe .shoe_name {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+.shoe .shoe_img {
+    width: 100%;
+}
+
+
+ table{
+    background-color: black;
+} 
+
+tr {
+    background-color: rgb(247, 196, 226);
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+.table_clmn_1 {
+    text-align: left;
+    padding: .7em;
+}
+
+.table_clmn_2 {
+    text-align: center;
+    padding: .7em;
+} 
+
+ .visit_gallary {
+    display: block;
+    margin-top: 3em;
+    width: 200px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: .6em;
+    border-radius: 20px;
+    border: 2px solid black;
+    transition: all .5s;
+    cursor: not-allowed;
+    text-align: center;
+}
+
+.visit_gallary:hover {
+    border: 2px solid rgb(252, 173, 221);
+    background-color: whitesmoke;
+    color:black;
+}
+
+.buy_online_btn_one {
+    margin-top: 2em;
+    display: block;
+    text-decoration: none;
+    font-family: "Montserrat" , sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    padding: .6em;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all .5s;
+} 
+
+.buy_online_btn_one:hover {
+    border: 2px solid #0f0f0f;
+    background-color: rgb(252, 173, 221);
+    color:#0f0f0f;
+}
+
+.hidden_msg {
+    /* margin: 0; */
+    color: red;
+    font-weight: bold;;
+    background: white;
+    padding: .5em;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+/******
+	footer
+		 ******/
+
+footer {
+height: 50px;
+padding-top: 1rem;
+background: black;
+color: white;
+text-align: center;
+}
+
+/******
+	Media queries
+		 ******/
+
+@media (min-width: 650px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .shoe_container {
+        grid-template-columns: repeat(2, auto);
+        gap: 15px;
+    }
+}       
+
+@media (min-width: 1000px) {
+    * {
+        font-size: 1.2rem;
+    }
+    .wrapper {
+        padding: 0 3em;
+    }
+    .shoe_container {
+        grid-template-columns: repeat(3, auto);
+        gap: 15px;
+    }
+}
